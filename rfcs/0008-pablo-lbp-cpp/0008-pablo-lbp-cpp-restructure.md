@@ -234,7 +234,11 @@ where
 }
 ----
 
-[#_algorithm_constant_productcompute_deposit_lp]
+[#_algorithm_constant_productcompute_deposit_lp]​
+302
+[plantuml,images/pablo-amm-currencies,png]
+303
+----
 === Algorithm: `constant_product::compute_deposit_lp`
 
 These are the modifications to be made to the existing https://github.com/ComposableFi/composable/blob/main/code/parachain/frame/composable-maths/src/dex/constant_product.rs#L148[function].
@@ -299,14 +303,13 @@ pub trait Amm {
 }
 ----
 
-[plantuml,images/pablo-amm-currencies,png]
-----
+```mermaid
 start
 ->pool_id;
 :pool = get pool from storage by pool_id;
 :return pool.assets.keys();
 stop
-----
+```
 
 [#_algorithm_ammget_exchange_value]
 === Algorithm: `Amm::get_exchange_value`
