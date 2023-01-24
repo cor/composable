@@ -67,7 +67,7 @@ When taking the fee into account the formula is adjusted as,
 stem:[s = (B_i/w_i) / (B_o / w_o) . (1 / (1 - f))] <- (1)
 . Out-given-in
 +
-stem:[A_o = B_o . (1 - (B_i / (B_i + A_i))^(w_i / w_o))]
+$$A_o = B_o . (1 - (B_i / (B_i + A_i))^(w_i / w_o))$$
 Here as they recommend the application of fee on the "way-in" with the following approach,
 +
 stem:[A_o = B_o . (1 - (B_i / (B_i + A_"sent" . (1 - f)))^(w_i / w_o))] <- (2)
