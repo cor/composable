@@ -8,16 +8,16 @@
 :sectnums:
 :sectnumlevels: 4
 
-== Abstract
+## Abstract
 
 This document is a review of current Pablo implementation and proposes updates to better align the constant product pool(CPP) and liquidity bootstrapping pool(LBP) code with the https://docs.balancer.fi/concepts/math/weighted-math[Balancer protocol] which those implementations are based on.
 
-== Background
+## Background
 
 Pablo http://link[constant product pool (analogous to Uniswap)] and the liquidity bootstrapping pool implementations are based on the balancer weighted math that is laid out https://dev.balancer.fi/resources/pool-math/weighted-math[here]. However, due to historical evolution of the code the implementations are right now separate and sometimes seems to be inconsistent. Specially the fee calculations that does not seem to follow a standard formula specially when it comes to "in given out" scenario.
 
 
-== Requirements
+## Requirements
 
 . Fees calculations on Pablo MUST align with the math for Balancer pools.
 . Liquidity provider token calculations on Pablo MUST align with the math for Balancer pools (taking into account weights).
@@ -27,8 +27,7 @@ Pablo http://link[constant product pool (analogous to Uniswap)] and the liquidit
 
 In addition to these hard requirements the idea is also to simplify the code as much as possible to avoid confusion specially regarding the `CurrencyPair` swaps.
 
-[#_method]
-== Method
+## Method
 
 Following is an overview of the proposed changes to the Pablo CPP and LBP implementation.
 
@@ -39,7 +38,7 @@ TODO
 
 Given the definition of symbols,
 
-stem:[A_i] : Amount (`A`) of input (`i`) token
+$A_x$ : Amount (`A`) of input (`i`) token
 
 stem:[A_"sent"] : Amount of input token sent by the user
 
