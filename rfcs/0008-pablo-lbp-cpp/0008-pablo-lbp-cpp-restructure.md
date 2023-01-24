@@ -1,4 +1,4 @@
-= Design Proposal: Pablo Formalization and Restructure
+# Design Proposal: Pablo Formalization and Restructure
 :math:
 :stem:
 :imagesoutdir: images
